@@ -5,9 +5,32 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DinoApi</title>
+    <style>
+      body{
+        cursor:none;
+      }
+
+      .cursor{
+        width: 20px;
+        heigth: 20px;
+        border-radius: 50%;
+        background: black;
+        position: fixed;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <div class="cursor"></div>
+    <script>
+      const cursor=document.querySelector(".cursor");
+      document.addEventListener("mousemove", (e)=>{
+        cursor.style.left=e.clientX+"px";
+        cursor.style.top=e.clientY+"px";
+      });
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
