@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "serve": "vite preview",
-    "start": "json-server --watch datos.json --port 3000"
+    "start": "npx json-server --watch datos.json --port 3000"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
